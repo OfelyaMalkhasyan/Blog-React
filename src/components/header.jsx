@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import HomeIcon from '@material-ui/icons/Home';
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -20,6 +21,15 @@ const useStyles = makeStyles((theme) => ({
   },
   homeIcon: {
     fontSize: 16,
+  },
+  loginButton: {
+    color: "white",
+  },
+  createPost: {
+    color: "white",
+  },
+  blog: {
+    color: "white",
   }
 }));
 
@@ -31,13 +41,14 @@ export default function ButtonAppBar() {
       <AppBar position="static">
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <Link to="/home" className={classes.blog}>
           <HomeIcon className={classes.homeIcon}/>
-            Blog
+          Blog </Link>
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            <Button color="inherit">Create Post</Button>
+            <Button color="inherit"> <Link to="/login" className={classes.createPost}>Create Post </Link></Button>
           </Typography>
-          <Button color="inherit">Log in</Button>
+          <Button color="inherit" ><Link to="/login" className={classes.loginButton}>Log in </Link></Button>
         </Toolbar>
       </AppBar>
     </div>
