@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function BodyBar() {
   const classes = useStyles();
+  
 
   return (
     <div className={classes.root}>
@@ -21,7 +22,8 @@ export default function BodyBar() {
         There is no post on web-site.
         </Box>
         <Box component="h1" className={classes.login} m={1}>
-        <Link>Log in</Link> and be our first story teller.
+        <NavLink to="/Login" >
+            Log in</NavLink> and be our first story teller.
         </Box>
       
     </div>
