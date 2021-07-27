@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ButtonAppBar() {
+export default function HeaderBar() {
   const classes = useStyles();
 
   return (
@@ -46,7 +46,7 @@ export default function ButtonAppBar() {
           Blog </Link>
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            <Button color="inherit"> <Link to="/login" className={classes.createPost}>Create Post </Link></Button>
+            <Button color="inherit"> <Link to="/post" className={classes.createPost}>Create Post </Link></Button>
           </Typography>
           <Button color="inherit" ><Link to="/login" className={classes.loginButton}>Log in </Link></Button>
         </Toolbar>
