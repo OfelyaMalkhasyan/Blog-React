@@ -9,6 +9,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     textAlign: "center",
   },
+  loginText: {
+    textDecoration: "none",
+  }
  
 }));
 
@@ -22,7 +25,7 @@ export default function BodyBar() {
         There is no post on web-site.
         </Box>
         <Box component="h1" className={classes.login} m={1}>
-        <NavLink to="/Login" >
+        <NavLink to="/Login" className={classes.loginText}>
             Log in</NavLink> and be our first story teller.
         </Box>
       

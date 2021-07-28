@@ -24,16 +24,19 @@ const useStyles = makeStyles((theme) => ({
   },
   loginButton: {
     color: "white",
+    textDecoration: "none",
   },
   createPost: {
     color: "white",
+    textDecoration: "none",
   },
   blog: {
     color: "white",
+    textDecoration: "none",
   }
 }));
 
-export default function HeaderBar() {
+export default function HeaderBar({children}) {
   const classes = useStyles();
 
   return (
@@ -46,9 +49,10 @@ export default function HeaderBar() {
           Blog </Link>
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            <Button color="inherit"> <Link to="/post" className={classes.createPost}>Create Post </Link></Button>
+            <Button color="inherit"> <Link to="/login" className={classes.createPost}>Create Post </Link></Button>
           </Typography>
-          <Button color="inherit" ><Link to="/login" className={classes.loginButton}>Log in </Link></Button>
+          {children}
+          {/* <Button color="inherit" ><Link to="/login" className={classes.loginButton}>Log in </Link></Button> */}
         </Toolbar>
       </AppBar>
     </div>

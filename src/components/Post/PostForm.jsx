@@ -9,11 +9,13 @@ import TextField from "@material-ui/core/TextField";
 const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(2),
+    marginLeft: "720px",
   },
   box: {
       border: "1px solid grey",
       padding: "10px",
       marginTop: "20px",
+      backgroundColor: "#80808008",
   },
   story: {
       textAlign: "center",
@@ -26,6 +28,7 @@ export default function CreatePost() {
   const styles = {
     marginLeft: "200px",
     width: "800px",
+    marginBottom: "20px",
   };
   return (
     <div className={classes.container}>
